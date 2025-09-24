@@ -1,0 +1,34 @@
+div.news-list
+{
+	word-wrap: break-word;
+}
+
+.news-item img.preview_picture {
+    display: block;
+    max-width: 100%;
+	max-height: 400px;
+	width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+.news-date-time {
+	color: #a9a9a9;
+	float:right;
+}
+
+.news-item-name{
+	font-size:18px; 
+	margin-bottom: 1em;
+	font-weight: bold;
+
+}
+.news-item-name a {
+    color: #6B1518 !important;
+	text-decoration:none !important;
+}
+
+.news-item-name a:hover {
+    color: #000000 !important;
+	text-decoration:underline !important;
+}
