@@ -1,34 +1,88 @@
-div.news-list
-{
-	word-wrap: break-word;
-}
-
-.news-item img.preview_picture {
-    display: block;
-    max-width: 100%;
-	max-height: 400px;
-	width: auto;
-    height: auto;
-    margin: 0 auto;
-}
-
-.news-date-time {
-	color: #a9a9a9;
-	float:right;
-}
-
-.news-item-name{
-	font-size:18px; 
-	margin-bottom: 1em;
-	font-weight: bold;
+.article-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
 }
-.news-item-name a {
-    color: #6B1518 !important;
-	text-decoration:none !important;
+
+.article-list__item {
+    position: relative;
+    flex: 0 0 100%;
 }
 
-.news-item-name a:hover {
-    color: #000000 !important;
-	text-decoration:underline !important;
+.article-item {
+    position: relative;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.05);
+    color: #172c5f;
+    letter-spacing: 0.1px;
+    background-color: #fff;
+
+    font-family: "Gilroy", "Sans Serif";
+    text-decoration: none;
+    color: #172c5f !important;
+}
+
+.article-item:active,
+.article-item:focus,
+.article-item:hover {
+    color: #172c5f;
+}
+
+.article-item__wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 0 0 100%;
+}
+
+.article-item__title {
+    margin-bottom: 29px;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    z-index: 1;
+    padding: 2rem;
+
+}
+
+.article-item__content {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+    padding-top: 3rem;
+    padding: 2rem;
+}
+
+.article-item__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.article-item__background img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    opacity: 0 !important;
+    transition: transform 1.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        opacity 0.6s linear;
+}
+
+.article-item:hover .article-item__background img {
+    opacity: 1 !important;
+    transform: scale(1.1);
 }
